@@ -6,7 +6,21 @@
         </div>
         <div class="col-md-6">
             <h1>Block Vendor</h1>
-            <app-block-vendor></app-block-vendor>
+            <div class="row header">
+                <div class="col-sm">
+                    Name
+                </div>
+                <div class="col-sm">
+                    Age
+                </div>
+                <div class="col-sm">
+                    City
+                </div>
+                <div class="col-sm">
+                    Block
+                </div>
+            </div>
+            <app-block-vendor *ngFor='let vendor of vendors' [vendor]="vendor"></app-block-vendor>
         </div>
     </div>
 </div>

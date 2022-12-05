@@ -1,1 +1,14 @@
-<p>block-vendor works!</p>
+<div class="row">
+    <div class="col-sm">
+        {{vendor.name}}
+    </div>
+    <div class="col-sm">
+        {{vendor.age}}
+    </div>
+    <div class="col-sm">
+        {{vendor.city}}
+    </div>
+    <div class="col-sm">
+        <button type="button" (click)="onBlock(vendor)">block</button>
+    </div>
+</div>

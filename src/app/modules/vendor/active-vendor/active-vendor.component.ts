@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Vendor } from 'src/app/vendor';
+import { ActiveService } from '../../services/active.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-active-vendor',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveVendorComponent implements OnInit {
 
-  constructor() { }
+  subscription!: Subscription;
+  activeVendor!: Vendor;
+
+  constructor(private blockService: ActiveService) {
+    this.subscription = blockService.onBlock().subscribe((vendor) => this.activeVendor = vendor)
+  }
 
   ngOnInit(): void {
   }

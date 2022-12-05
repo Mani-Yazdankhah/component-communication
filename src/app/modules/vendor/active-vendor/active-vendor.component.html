@@ -1,1 +1,24 @@
-<p>active vendor</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            Name
+        </div>
+        <div class="col-sm">
+            Age
+        </div>
+        <div class="col-sm">
+            City
+        </div>
+    </div>
+    <div *ngIf="activeVendor !== undefined" class="row">
+        <div class="col-sm">
+            {{activeVendor.name}}
+        </div>
+        <div class="col-sm">
+            {{activeVendor.age}}
+        </div>
+        <div class="col-sm">
+            {{activeVendor.city}}
+        </div>
+    </div>
+</div>
